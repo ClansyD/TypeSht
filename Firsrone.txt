@@ -1,0 +1,22 @@
+
+import time
+
+colors = {
+    'red': '\033[91m',
+    'green': '\033[92m',
+    'yellow': '\033[93m',
+    'blue': '\033[94m',
+    'magenta': '\033[95m',
+    'cyan': '\033[96m',
+    'reset': '\033[0m'
+}
+
+def color_flex():
+    for color in colors:
+        if color == 'reset':
+            continue
+        print(colors[color] + f"Терминал в цвете {color} — ха-ха!" + colors['reset'])
+        time.sleep(0.5)
+
+if __name__ == "__main__":
+    color_flex()
